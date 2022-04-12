@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { ArticlePrev, Container, MainImg, ShareModal, Writer } from "./StyledComponents";
 
 export default function ArticlePreview() {
   const [toggle, setToggle] = useState(false);
   return (
-    <div>
-      <img src={process.env.PUBLIC_URL + "/images/drawers.jpg"} alt='Drawers' />
-      <div>
+    <Container>
+      <MainImg src={process.env.PUBLIC_URL + "/images/drawers.jpg"} alt='Drawers' />
+      <ArticlePrev>
         <h1>
           Shift the overall look and feel by adding these wonderful touches to
           furniture in your home
@@ -15,7 +16,7 @@ export default function ArticlePreview() {
           felt slightly bare and uninviting. I’ve got some simple tips to help
           you make any room feel complete.
         </p>
-        <div>
+        <Writer>
           <img
             src={process.env.PUBLIC_URL + "/images/avatar-michelle.jpg"}
             alt='Avatar'
@@ -24,7 +25,7 @@ export default function ArticlePreview() {
             <strong>Michelle Appleton</strong>
             <p>28 Jun 2020</p>
           </div>
-          <div>
+          <ShareModal toggle={toggle}>
             <p>SHARE</p>
             <img
               src={process.env.PUBLIC_URL + "/images/icon-facebook.svg"}
@@ -38,7 +39,7 @@ export default function ArticlePreview() {
               src={process.env.PUBLIC_URL + "/images/icon-twitter.svg"}
               alt='Twitter'
             />
-          </div>
+          </ShareModal>
           <button
             onClick={() => {
               console.log(toggle);
@@ -50,8 +51,8 @@ export default function ArticlePreview() {
               alt='Share'
             />
           </button>
-        </div>
-      </div>
-    </div>
+        </Writer>
+      </ArticlePrev>
+    </Container>
   );
 }
