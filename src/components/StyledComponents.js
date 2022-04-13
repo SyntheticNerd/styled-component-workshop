@@ -60,7 +60,7 @@ export const ShareModal = styled.div`
   top: -140%;
   right: 1.5em;
   transform: translateX(50%);
-  & * {
+  & > * {
     margin: 0px 8px;
   }
   & img {
