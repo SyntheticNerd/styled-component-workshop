@@ -205,3 +205,9 @@ You can use as many Theme Providers nested within your project to allow for scop
 
 - [Styled Component Documentation](https://styled-components.com/docs/basics)
 - [Tagged template literal](https://www.freecodecamp.org/news/a-quick-introduction-to-tagged-template-literals-2a07fd54bc1d/)
+
+## Author
+
+- Website - [Andrew Schroepfer](https://syntheticdesigner.github.io/)
+- Social - [Linkedin](https://www.linkedin.com/in/andrew-schroepfer/)
+- Github - [Github](https://github.com/SyntheticDesigner)
