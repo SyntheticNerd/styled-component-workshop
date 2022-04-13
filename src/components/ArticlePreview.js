@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import AboutWriter from "./AboutWriter";
 
 export default function ArticlePreview() {
-  const [toggle, setToggle] = useState(false);
+  
   return (
     <div>
       <img src={process.env.PUBLIC_URL + "/images/drawers.jpg"} alt='Drawers' />
@@ -15,42 +16,7 @@ export default function ArticlePreview() {
           felt slightly bare and uninviting. I’ve got some simple tips to help
           you make any room feel complete.
         </p>
-        <div>
-          <img
-            src={process.env.PUBLIC_URL + "/images/avatar-michelle.jpg"}
-            alt='Avatar'
-          />
-          <div>
-            <strong>Michelle Appleton</strong>
-            <p>28 Jun 2020</p>
-          </div>
-          <div>
-            <p>SHARE</p>
-            <img
-              src={process.env.PUBLIC_URL + "/images/icon-facebook.svg"}
-              alt='Facebook'
-            />
-            <img
-              src={process.env.PUBLIC_URL + "/images/icon-pinterest.svg"}
-              alt='Pinterest'
-            />
-            <img
-              src={process.env.PUBLIC_URL + "/images/icon-twitter.svg"}
-              alt='Twitter'
-            />
-          </div>
-          <button
-            onClick={() => {
-              console.log(toggle);
-              setToggle(!toggle);
-            }}
-          >
-            <img
-              src={process.env.PUBLIC_URL + "/images/icon-share.svg"}
-              alt='Share'
-            />
-          </button>
-        </div>
+        <AboutWriter/>
       </div>
     </div>
   );
