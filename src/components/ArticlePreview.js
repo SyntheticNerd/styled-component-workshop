@@ -1,15 +1,13 @@
 import React, { useState } from "react";
+import AboutWriter from "./AboutWriter";
 import {
   ArticlePrev,
   Container,
   MainImg,
-  ShareBtn,
-  ShareModal,
-  Writer,
 } from "./StyledComponents";
 
 export default function ArticlePreview() {
-  const [toggle, setToggle] = useState(false);
+  
 
   return (
     <Container>
@@ -27,41 +25,7 @@ export default function ArticlePreview() {
           felt slightly bare and uninviting. I’ve got some simple tips to help
           you make any room feel complete.
         </p>
-        <Writer>
-          <img
-            src={process.env.PUBLIC_URL + "/images/avatar-michelle.jpg"}
-            alt='Avatar'
-          />
-          <div>
-            <strong>Michelle Appleton</strong>
-            <p>28 Jun 2020</p>
-          </div>
-          <ShareModal toggle={toggle}>
-            <p>SHARE</p>
-            <img
-              src={process.env.PUBLIC_URL + "/images/icon-facebook.svg"}
-              alt='Facebook'
-            />
-            <img
-              src={process.env.PUBLIC_URL + "/images/icon-pinterest.svg"}
-              alt='Pinterest'
-            />
-            <img
-              src={process.env.PUBLIC_URL + "/images/icon-twitter.svg"}
-              alt='Twitter'
-            />
-          </ShareModal>
-          <ShareBtn
-            onFocusCapture={() => {
-              console.log(toggle);
-              setToggle(!toggle);
-            }}
-            onBlur={() => {
-              console.log(toggle);
-              setToggle(!toggle);
-            }}
-          ></ShareBtn>
-        </Writer>
+        <AboutWriter/>
       </ArticlePrev>
     </Container>
   );
