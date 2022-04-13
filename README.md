@@ -1,4 +1,5 @@
 # Follow along
+
 [Checkout the Finished Product](https://syntheticdesigner.github.io/styled-component-workshop/)
 
 To get started run
