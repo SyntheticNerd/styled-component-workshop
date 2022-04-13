@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import { ArticlePrev, Container, MainImg, ShareModal, Writer } from "./StyledComponents";
+import {
+  ArticlePrev,
+  Container,
+  MainImg,
+  ShareModal,
+  Writer,
+} from "./StyledComponents";
 
 export default function ArticlePreview() {
   const [toggle, setToggle] = useState(false);
   return (
     <Container>
-      <MainImg src={process.env.PUBLIC_URL + "/images/drawers.jpg"} alt='Drawers' />
+      <MainImg
+        src={process.env.PUBLIC_URL + "/images/drawers.jpg"}
+        alt='Drawers'
+      />
       <ArticlePrev>
         <h1>
           Shift the overall look and feel by adding these wonderful touches to
@@ -45,12 +54,7 @@ export default function ArticlePreview() {
               console.log(toggle);
               setToggle(!toggle);
             }}
-          >
-            <img
-              src={process.env.PUBLIC_URL + "/images/icon-share.svg"}
-              alt='Share'
-            />
-          </button>
+          ></button>
         </Writer>
       </ArticlePrev>
     </Container>
