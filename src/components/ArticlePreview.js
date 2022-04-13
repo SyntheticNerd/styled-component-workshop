@@ -3,12 +3,14 @@ import {
   ArticlePrev,
   Container,
   MainImg,
+  ShareBtn,
   ShareModal,
   Writer,
 } from "./StyledComponents";
 
 export default function ArticlePreview() {
   const [toggle, setToggle] = useState(false);
+
   return (
     <Container>
       <MainImg
@@ -49,12 +51,16 @@ export default function ArticlePreview() {
               alt='Twitter'
             />
           </ShareModal>
-          <button
-            onClick={() => {
+          <ShareBtn
+            onFocusCapture={() => {
               console.log(toggle);
               setToggle(!toggle);
             }}
-          ></button>
+            onBlur={() => {
+              console.log(toggle);
+              setToggle(!toggle);
+            }}
+          ></ShareBtn>
         </Writer>
       </ArticlePrev>
     </Container>

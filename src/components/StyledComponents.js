@@ -9,14 +9,31 @@ export const Container = styled.div`
   border-radius: 16px;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.2);
 `;
-
+export const ShareBtn = styled.button`
+  border: none;
+  outline: none;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin-left: auto;
+  background-image: url(${process.env.PUBLIC_URL + "/images/icon-share.svg"});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  background-color: hsl(210, 46%, 95%);
+  &:hover {
+    background-color: hsl(217, 19%, 35%);
+  }
+  &:focus {
+    background-color: hsl(217, 19%, 35%);
+  }
+`;
 export const MainImg = styled.img`
   width: 300px;
   object-fit: cover;
   object-position: top left;
   border-radius: 16px 0px 0px 16px;
 `;
-
 export const ArticlePrev = styled.div`
   padding: 32px;
   text-align: left;
@@ -33,38 +50,7 @@ export const ArticlePrev = styled.div`
     font-weight: 400;
   }
 `;
-
-export const Writer = styled.div`
-position: relative;
-  display: flex;
-  height: 50px;
-  align-items: center;
-  & > img {
-    height: 100%;
-    border-radius: 50%;
-  }
-  & button {
-    border: none;
-    outline: none;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    margin-left: auto;
-    background-image: url(${process.env.PUBLIC_URL + "/images/icon-share.svg"});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-    background-color: hsl(210, 46%, 95%);
-  }
-  & div {
-    height: fit-content;
-    margin-left: 16px;
-    color: hsl(217, 19%, 35%);
-  }
-`;
-
 export const ShareModal = styled.div`
-  /* border: 2px solid yellow; */
   display: ${(props) => (props.toggle ? "flex" : "none")};
   background-color: hsl(217, 19%, 35%);
   align-items: center;
@@ -74,7 +60,7 @@ export const ShareModal = styled.div`
   top: -140%;
   right: 1.5em;
   transform: translateX(50%);
-  & *{
+  & * {
     margin: 0px 8px;
   }
   & img {
@@ -85,7 +71,7 @@ export const ShareModal = styled.div`
     font-weight: 600;
     letter-spacing: 4px;
   }
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     background-color: hsl(217, 19%, 35%);
@@ -94,5 +80,20 @@ export const ShareModal = styled.div`
     z-index: -1;
     bottom: -16px;
     left: 50%;
+  }
+`;
+export const Writer = styled.div`
+  position: relative;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  & > img {
+    height: 100%;
+    border-radius: 50%;
+  }
+  & div {
+    height: fit-content;
+    margin-left: 16px;
+    color: hsl(217, 19%, 35%);
   }
 `;
