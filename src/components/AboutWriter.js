@@ -1,43 +1,22 @@
-import React, { useState } from 'react'
-import { ShareBtn, ShareModal, Writer } from './StyledComponents';
+import React, { useState } from "react";
+import Btn from "./Btn";
+import Modal from "./Modal";
+import { Writer } from "./StyledComponents";
 
 export default function AboutWriter() {
-    const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false);
   return (
     <Writer>
-    <img
-      src={process.env.PUBLIC_URL + "/images/avatar-michelle.jpg"}
-      alt='Avatar'
-    />
-    <div>
-      <strong>Michelle Appleton</strong>
-      <p>28 Jun 2020</p>
-    </div>
-    <ShareModal toggle={toggle}>
-      <p>SHARE</p>
       <img
-        src={process.env.PUBLIC_URL + "/images/icon-facebook.svg"}
-        alt='Facebook'
+        src={process.env.PUBLIC_URL + "/images/avatar-michelle.jpg"}
+        alt='Avatar'
       />
-      <img
-        src={process.env.PUBLIC_URL + "/images/icon-pinterest.svg"}
-        alt='Pinterest'
-      />
-      <img
-        src={process.env.PUBLIC_URL + "/images/icon-twitter.svg"}
-        alt='Twitter'
-      />
-    </ShareModal>
-    <ShareBtn
-      onFocusCapture={() => {
-        console.log(toggle);
-        setToggle(!toggle);
-      }}
-      onBlur={() => {
-        console.log(toggle);
-        setToggle(!toggle);
-      }}
-    ></ShareBtn>
-  </Writer>
-  )
+      <div>
+        <strong>Michelle Appleton</strong>
+        <p>28 Jun 2020</p>
+      </div>
+      <Modal toggle={toggle}/>
+      <Btn toggle={toggle} setToggle={setToggle}/>
+    </Writer>
+  );
 }

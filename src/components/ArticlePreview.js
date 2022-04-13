@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import AboutWriter from "./AboutWriter";
-import {
-  ArticlePrev,
-  Container,
-  MainImg,
-} from "./StyledComponents";
+import { ArticlePrev, Container, MainImg } from "./StyledComponents";
 
 export default function ArticlePreview() {
-  
-
   return (
     <Container>
       <MainImg
@@ -25,7 +19,7 @@ export default function ArticlePreview() {
           felt slightly bare and uninviting. I’ve got some simple tips to help
           you make any room feel complete.
         </p>
-        <AboutWriter/>
+        <AboutWriter />
       </ArticlePrev>
     </Container>
   );
