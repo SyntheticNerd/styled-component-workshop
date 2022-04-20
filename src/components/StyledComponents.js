@@ -9,6 +9,47 @@ export const Container = styled.div`
   border-radius: 16px;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.2);
 `;
+
+export const MainImg = styled.img`
+  width: 300px;
+  object-fit: cover;
+  object-position: top left;
+  border-radius: 16px 0px 0px 16px;
+`;
+
+export const ArticlePrev = styled.div`
+  padding: 32px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: hsl(217, 19%, 35%);
+  }
+  p {
+    color: hsl(214, 17%, 51%);
+    font-weight: 400;
+  }
+`;
+
+export const Writer = styled.div`
+  position: relative;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  & > img {
+    height: 100%;
+    border-radius: 50%;
+  }
+  & div {
+    height: fit-content;
+    margin-left: 16px;
+    color: hsl(217, 19%, 35%);
+  }
+`;
+
 export const ShareBtn = styled.button`
   border: none;
   outline: none;
@@ -28,28 +69,7 @@ export const ShareBtn = styled.button`
     background-color: hsl(217, 19%, 35%);
   }
 `;
-export const MainImg = styled.img`
-  width: 300px;
-  object-fit: cover;
-  object-position: top left;
-  border-radius: 16px 0px 0px 16px;
-`;
-export const ArticlePrev = styled.div`
-  padding: 32px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  h1 {
-    font-size: 1.5em;
-    font-weight: 600;
-    color: hsl(217, 19%, 35%);
-  }
-  p {
-    color: hsl(214, 17%, 51%);
-    font-weight: 400;
-  }
-`;
+
 export const ShareModal = styled.div`
   display: ${(props) => (props.toggle ? "flex" : "none")};
   background-color: hsl(217, 19%, 35%);
@@ -82,18 +102,4 @@ export const ShareModal = styled.div`
     left: 50%;
   }
 `;
-export const Writer = styled.div`
-  position: relative;
-  display: flex;
-  height: 50px;
-  align-items: center;
-  & > img {
-    height: 100%;
-    border-radius: 50%;
-  }
-  & div {
-    height: fit-content;
-    margin-left: 16px;
-    color: hsl(217, 19%, 35%);
-  }
-`;
+
