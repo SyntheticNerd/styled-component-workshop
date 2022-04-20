@@ -1,12 +1,13 @@
 import React from "react";
 import AboutWriter from "./AboutWriter";
+import { ArticlePrev, Container, MainImg } from "./StyledComponents";
 
 export default function ArticlePreview() {
   
   return (
-    <div>
-      <img src={process.env.PUBLIC_URL + "/images/drawers.jpg"} alt='Drawers' />
-      <div>
+    <Container>
+      <MainImg src={process.env.PUBLIC_URL + "/images/drawers.jpg"} alt='Drawers' />
+      <ArticlePrev>
         <h1>
           Shift the overall look and feel by adding these wonderful touches to
           furniture in your home
@@ -17,7 +18,7 @@ export default function ArticlePreview() {
           you make any room feel complete.
         </p>
         <AboutWriter/>
-      </div>
-    </div>
+      </ArticlePrev>
+    </Container>
   );
 }
