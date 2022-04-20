@@ -1,12 +1,11 @@
 import React from "react";
 import AboutWriter from "./AboutWriter";
-import { ArticlePrev, Container, MainImg } from "./StyledComponents";
-
+import {Container, ArticlePrev, MainImg } from "./StyledComponents";
 export default function ArticlePreview() {
   
   return (
-    <Container>
-      <MainImg src={process.env.PUBLIC_URL + "/images/drawers.jpg"} alt='Drawers' />
+    <Container >
+      <MainImg  src={process.env.PUBLIC_URL + "/images/drawers.jpg"} alt='Drawers' />
       <ArticlePrev>
         <h1>
           Shift the overall look and feel by adding these wonderful touches to

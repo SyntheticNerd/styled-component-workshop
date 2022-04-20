@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Btn from "./Btn";
 import Modal from "./Modal";
-import { Writer } from "./StyledComponents";
+import {Writer} from "./StyledComponents"
 
 export default function AboutWriter() {
   const [toggle, setToggle] = useState(false);
@@ -15,8 +15,8 @@ export default function AboutWriter() {
         <strong>Michelle Appleton</strong>
         <p>28 Jun 2020</p>
       </div>
-      <Modal toggle={toggle} />
-      <Btn toggle={toggle} setToggle={setToggle} />
+      <Modal toggle={toggle}/>
+      <Btn toggle={toggle} setToggle={setToggle}/>
     </Writer>
   );
 }
