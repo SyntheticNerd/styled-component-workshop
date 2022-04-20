@@ -1,8 +1,8 @@
 import React from "react";
-
+import { SharedModal } from "./StyledComponents";
 export default function Modal({ toggle }) {
   return (
-    <div style={toggle ? { display: "block" } : { display: "none" }}>
+    <SharedModal toggle={toggle}>
       <p>SHARE</p>
       <img
         src={process.env.PUBLIC_URL + "/images/icon-facebook.svg"}
@@ -16,6 +16,6 @@ export default function Modal({ toggle }) {
         src={process.env.PUBLIC_URL + "/images/icon-twitter.svg"}
         alt='Twitter'
       />
-    </div>
+    </SharedModal>
   );
 }
